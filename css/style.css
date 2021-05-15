@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lexend&family=Livvic&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Lexend&family=Livvic&family=Anton&family=Josefin+Sans&display=swap');
 
 :root {
     --grey-color: #3f4954;
@@ -11,6 +11,7 @@
     --lexend: 'Lexend', sans-serif;
     --livvic: 'Livvic', sans-serif;
     --anton: 'Anton', sans-serif;
+    --josefin: 'Josefin Sans', sans-serif;
 }
 
 * {
@@ -185,6 +186,7 @@ main .site-title .site-background {
 
 main .site-title h1, h3 {
     margin: 0.3rem;
+    padding: 0 1px;
 }
 
 main .site-title .btn {
@@ -266,7 +268,16 @@ main .site-content.grid {
 
 main .post-content {
     width: 100%;
-    margin: 1rem 0;
+    margin: 0.8rem 0;
+}
+
+main .posts >*:first-child {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+main .site-content hr {
+    width: 98%;
 }
 
 main .site-content .post-content > .post-image, .post-title {
@@ -329,16 +340,217 @@ main .site-content .post-title p {
     font-family: var(--lexend);
 }
 
-.site-content aside {
+.site-content .pagination .pages {
+    background: var(--grey-color);
+    color: var(--white);
+}
+
+
+/* -------------- Sidebar ---------------- */
+
+.site-content .sidebar {
     margin-top: 1rem;
+}
+
+.site-content > .sidebar .category-list {
+    margin: 1rem 2rem;
+    font-family: var(--livvic);
+}
+
+.site-content > .sidebar .category-list .list-items {
+    background: var(--sky);
+    padding: 0.4rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 3rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content > .sidebar .category-list .list-items a {
+    color: black;
+}
+
+.site-content .sidebar .popular-post .post-content {
+    padding: 0.8rem 0;
+}
+
+.site-content .sidebar .popular-post h2 {
+    padding-top: 8rem;
+    font-weight: bold;
+}
+
+.site-content .sidebar .popular-post .post-info {
+    padding: 0.4rem 0.1rem !important;
+    bottom: 0rem !important;
+    left: 1rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a {
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter {
+    padding-top: 8rem;
+}
+
+.site-content .sidebar .newsletter .form-element {
+    padding: 2rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element {
+    width: 87%;
+    height: 2.5rem;
+    padding: 0.3rem 0.5rem;
+    font-family: var(--lexend);
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn {
+    border-radius: 0;
+    padding: 0.8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+.site-content .sidebar .popular-tags {
+    padding: 4rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags {
+    margin-top: 20px;
+}
+
+.site-content .sidebar .popular-tags .tags .tag {
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+}
+
+/* -------------- Site Content ---------------- */
+
+footer.footer {
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 2rem;
+}
+
+footer.footer .container > div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2 {
+    color: white;
+    padding: 15px 0;
+}
+
+footer.footer .container p {
+    padding-bottom: 15px;
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--lexend);
+    font-size: 1rem;
+}
+
+footer.footer .newsletter .form-element span {
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow .social-links i {
+    font-size: 1rem;
+    padding: 0 5px;
+    color: white;
+}
+
+footer.footer .right {
+    padding: 20px;
+    justify-content: center;
+    font-family: var(--josefin);
+}
+
+footer.footer .right h4 a {
+    color: white;
+}
+
+footer.footer .move-up {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span {
+    font-size: 1.5rem;
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover {
+    color: white;
+    cursor: pointer;
 }
 
 
 /* ------------------------ Media Queries --------------------------- */
 
+/* --- Viewport if width is less than or equal to 1130px -- */
+
+@media only screen and (max-width: 1130px) {
+    main .site-title {
+        height: 80vh;
+    }
+    
+    main .blog {
+        height: 680px;
+    }
+
+    .site-content .post-content > .post-image .post-info {
+        left: 1.9rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .popular-post .post-info {
+        display: none !important;
+    }
+
+    footer.footer .container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+
 /* --- Viewport if width is less than or equal to 750px -- */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
     .nav .nav-menu, 
     .nav .nav-items {
         flex-direction: column;
@@ -348,4 +560,35 @@ main .site-content .post-title p {
     .nav .toggle-collapse {
         display: initial;
     }
+
+    main .site-content.grid {
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Viewport if width is less than or equal to 520px -- */
+
+@media only screen and (max-width: 520px) {
+    .site-content .post-content > .post-image .post-info {
+        display: none;
+    }
+
+    footer.footer .container > div {
+        padding: 1rem .9rem !important;
+    }
+
+    footer.footer .right {
+        padding: 2rem 1.4rem;
+        text-align: center;
+    }
+}
+
+/* --- Viewport if width is less than or equal to 280px -- */
+
+@media only screen and (max-width: 280px) {
+
 }
