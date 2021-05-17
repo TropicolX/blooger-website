@@ -35,6 +35,10 @@ html {
     color: var(--grey-color);
 }
 
+.overflow-x {
+    overflow-x: visible;
+}
+
 /* ------------------ Global Classes ---------------- */
 
 ul {
@@ -405,6 +409,7 @@ main .site-content .post-title p {
     width: 87%;
     height: 2.5rem;
     padding: 0.3rem 0.5rem;
+    border: 0.2px black solid;
     font-family: var(--lexend);
     font-size: 1rem;
 }
@@ -442,7 +447,7 @@ footer.footer {
 footer.footer .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 0 2rem;
+    padding: 2rem 2rem;
 }
 
 footer.footer .container > div {
@@ -592,20 +597,6 @@ footer.footer .move-up span:hover {
 
     footer.footer .container > div {
         padding: 1rem .9rem !important;
-    }
-
-    footer.footer .newsletter .form-element span {
-        display: block;
-        width: 20%;
-        margin-top: 10px;
-    }
-
-    footer.footer .newsletter .form-element {
-        background: none;
-    }
-
-    footer.footer .newsletter .form-element input {
-        background: black;
     }
 
     footer.footer .right {
