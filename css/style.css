@@ -18,6 +18,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -173,7 +174,7 @@ p {
 main .site-title {
     background: url('../images/Background-image.png');
     background-size: cover;
-    height: 120vh;
+    height: 130vh;
     display: flex;
     justify-content: center;
 }
@@ -207,7 +208,7 @@ main .blog {
     background: url('../images/Abract01.png');
     background-repeat: no-repeat;
     background-position: right;
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     background-size: 65%;
 }
